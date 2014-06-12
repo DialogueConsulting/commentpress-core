@@ -131,7 +131,11 @@ if ( !commentpress_has_feature_image() ) {
 	
 	<?php global $more; $more = true; the_content(''); ?>
 
-
+		<?php if (function_exists ('ADDTOANY_SHARE_SAVE_KIT')) {
+			echo("<div class='running_header_bottom'> Share this Page:");
+			ADDTOANY_SHARE_SAVE_KIT (); 
+			echo('</div>');
+		}?>
 
 	<?php
 	
