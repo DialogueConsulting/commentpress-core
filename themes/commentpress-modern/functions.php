@@ -77,7 +77,8 @@ function commentpress_setup(
 			'width' => apply_filters( 'cp_header_image_width', 940 ),
 			'height' => apply_filters( 'cp_header_image_height', 67 ),
 			'wp-head-callback' => 'commentpress_header',
-			'admin-head-callback' => 'commentpress_admin_header' 
+			'admin-head-callback' => 'commentpress_admin_header',
+			'default-color'          => 'fff',
 			
 		) );
 	
