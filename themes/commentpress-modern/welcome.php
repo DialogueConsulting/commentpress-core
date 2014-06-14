@@ -13,12 +13,16 @@ $title = get_the_title( $next_page_id );
 
 // init
 $next_page_html = '';
+$next_page_html_bottom = '';
 
 // test if the link points to this page
 if ( $next_page_id != $post->ID ) {
 
 	// set the link
 	$next_page_html = '<a href="'.get_permalink( $next_page_id ).'" id="next_page" class="css_btn" title="'.esc_attr( $title ).'">'.
+							$title.
+					  '</a>';
+  	$next_page_html_bottom = '<a href="'.get_permalink( $next_page_id ).'" id="next_page_bottom" class="css_btn" title="'.esc_attr( $title ).'">'.
 							$title.
 					  '</a>';
 }
@@ -179,13 +183,13 @@ if ( !commentpress_has_feature_image() ) {
 
 
 
-<?php if ( $next_page_html != '' ) { ?>
+<?php if ( $next_page_html_bottom != '' ) { ?>
 <div class="page_nav_lower">
 
 <div class="page_navigation">
 
 <ul>
-<li class="alignright"><?php echo $next_page_html; ?></li>
+<li class="alignright"><?php echo $next_page_html_bottom; ?></li>
 </ul>
 
 </div><!-- /page_navigation -->

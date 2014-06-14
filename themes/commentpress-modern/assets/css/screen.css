@@ -190,7 +190,7 @@ a.skip, a.skip:hover, a.skip:visited {
     border: 5px solid #b5bfb2;
     margin: 0;
     padding: 10px 0;
-    background: #9aab84;
+    background: #000;
     -moz-border-radius: 22px;
     -khtml-border-radius: 22px;
     -webkit-border-radius: 22px;
@@ -205,6 +205,31 @@ a.skip:active, a.skip:focus {
     width: 58%;
     text-align: center;
 }
+#skip li{ list-style-type: none }
+
+#skip a{
+    position: absolute;
+    left: -99999px;
+    top: 30px;
+}
+
+#skip a:focus, #skip a:active{
+    position: relative;
+    left: 0;
+    z-index:9999;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 45px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: -4px !important;
+    font: bold 50px "Arial", "Freesans", sans-serif !important;
+    /* color information, edit this to suit the colors of your layout */
+        color: #AEAEFE;
+    border: 1px dotted #ffb4db;
+}
+T
 button, a.button, input[type=submit], input[type=button], input[type=reset], ul.button-nav li a, div.generic-button a {
     background: #fff;
     background: -moz-linear-gradient(top, #fff 0, #ededed 100%);

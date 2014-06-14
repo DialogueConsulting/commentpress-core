@@ -16,9 +16,10 @@ Separated this out for inclusion in multiple files.
 
 // Start HTML
 ?>
-<a class="skip" href="#content"><?php _e( 'Skip to Content', 'commentpress-core' ); ?></a>
-<span class="off-left"> | </span>
-<a class="skip" href="#toc_list"><?php _e( 'Skip to Table of Contents', 'commentpress-core' ); ?></a><!-- /skip_links -->
+<ul id="skip">
+	<li><a class="skip" href="#content"><?php _e( 'Skip to Content', 'commentpress-core' ); ?></a></li>
+<li><a class="skip" href="#toc_list"><?php _e( 'Skip to Navigation', 'commentpress-core' ); ?></a></li>
+</ul><!-- /skip_links -->
 
 
 
