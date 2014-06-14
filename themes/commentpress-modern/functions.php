@@ -5383,15 +5383,8 @@ function commentpress_has_feature_image() {
 
 function bloglow_custom_jquery_cdn() {
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", false, null);
+	wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", false, null);
 	wp_enqueue_script('jquery');
-	wp_deregister_script('jquery-ui-core');
-	wp_register_script('jquery-ui-core', "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js",false, null);
-	wp_enqueue_script('jquery-ui-core');
-	wp_deregister_script('jquery-ui-button');
-	wp_deregister_script('jquery-ui-resizable');
-	wp_deregister_script('jquery-ui-position');
-	wp_deregister_script('jquery-ui-dialog');
 }
 if (!is_admin()) add_action("wp_enqueue_scripts", "bloglow_custom_jquery_cdn", 11);
 
