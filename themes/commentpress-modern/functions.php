@@ -662,7 +662,7 @@ endif; // commentpress_background
 if ( ! function_exists( 'commentpress_header' ) ):
 /** 
  * @description: custom header
- * @todo: 
+ * @todo: make bg_colour a customizable setting
  *
  */
 function commentpress_header( 
@@ -670,7 +670,7 @@ function commentpress_header(
 ) { //-->
 
 	// init (same as bg in layout.css and default in class_commentpress_db.php)
-	$bg_colour = '2c2622';
+	$bg_colour = 'fff';
 
 	// access plugin
 	global $commentpress_core;
