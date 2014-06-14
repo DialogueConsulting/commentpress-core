@@ -271,6 +271,7 @@
 
 		<?php 
 		if ( function_exists( 'addthis_display_social_widget' ) ) {
+			echo('<h5>Share this page:</h5>');
 			do_action( 'addthis_widget', get_permalink( $post ), get_the_title( $post ), 'below' );
 			}
 		?>
