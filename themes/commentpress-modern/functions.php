@@ -679,12 +679,12 @@ function commentpress_header(
 	if ( is_object( $commentpress_core ) ) {
 	
 		// override
-		$bg_colour = $commentpress_core->db->option_get_header_bg();
+		// $bg_colour = $commentpress_core->db->option_get_header_bg();
 	
 	}
 	
 	// allow overrides
-	$bg_colour = apply_filters( 'cp_default_header_bgcolor', $bg_colour );	
+	// $bg_colour = apply_filters( 'cp_default_header_bgcolor', $bg_colour );	
 	
 	
 	
