@@ -271,7 +271,7 @@
 
 		<?php 
 		if ( function_exists( 'addthis_display_social_widget' ) ) {
-			_e( "Share this page:", 'commentpress-core' );
+			?><h5><?php _e( "Share this page:", 'commentpress-core' ); ?></h5><?php 
 			do_action( 'addthis_widget', get_permalink( $post ), get_the_title( $post ), 'below' );
 			}
 		?>
