@@ -137,7 +137,7 @@ if ( !commentpress_has_feature_image() ) {
 
 		<?php 
 		if ( function_exists( 'addthis_display_social_widget' ) ) {
-			echo addthis_display_social_widget( '' );
+			do_action( 'addthis_widget', get_permalink( $post ), get_the_title( $post ), 'below' );
 		}
 		?>
 
