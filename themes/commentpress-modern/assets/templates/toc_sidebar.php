@@ -41,6 +41,25 @@ echo apply_filters( 'cp_content_tab_search_title', __( 'Search', 'commentpress-c
 </div>
 
 
+<h3 class="activity_heading"><?php 
+echo apply_filters( 'cp_content_tab_special_pages_title', __( 'Special Pages', 'commentpress-core' ) ); 
+?></h3>
+
+<div class="paragraph_wrapper special_pages_wrapper">
+
+<?php 
+
+// until WordPress supports a locate_theme_file() function, use filter
+$include = apply_filters( 
+	'cp_template_navigation',
+	get_template_directory() . '/assets/templates/navigation.php'
+);
+
+include( $include );
+
+?>
+
+</div>
 
 <h3 class="activity_heading"><?php 
 echo apply_filters( 'cp_content_tab_toc_title', __( 'Table of Contents', 'commentpress-core' ) ); 
@@ -71,25 +90,6 @@ if ( is_object( $commentpress_core ) ) {
 	
 </div>
 
-<h3 class="activity_heading"><?php 
-echo apply_filters( 'cp_content_tab_special_pages_title', __( 'Special Pages', 'commentpress-core' ) ); 
-?></h3>
-
-<div class="paragraph_wrapper special_pages_wrapper">
-
-<?php 
-
-// until WordPress supports a locate_theme_file() function, use filter
-$include = apply_filters( 
-	'cp_template_navigation',
-	get_template_directory() . '/assets/templates/navigation.php'
-);
-
-include( $include );
-
-?>
-
-</div>
 
 <?php
 // TODO add another menu item here and/or allow users to customise the navigation menu
