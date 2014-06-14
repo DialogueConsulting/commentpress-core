@@ -2063,3 +2063,10 @@ h2.post_title, .search_result h3 {
 .wp-switch-editor {
     color: #6a6a6a;
 }
+.sharing-title {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size:1.2em;
+    margin:0;
+}

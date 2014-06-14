@@ -137,7 +137,7 @@ if ( !commentpress_has_feature_image() ) {
 
 		<?php 
 		if ( function_exists( 'addthis_display_social_widget' ) ) {
-			?><p><strong><?php _e( "Share this page:", 'commentpress-core' ); ?></strong></p><?php 
+			?><p class="sharing-title"><?php _e( "Share this page:", 'commentpress-core' ); ?></p><?php 
 			do_action( 'addthis_widget', get_permalink( $post ), get_the_title( $post ), 'below' );
 		}
 		?>
