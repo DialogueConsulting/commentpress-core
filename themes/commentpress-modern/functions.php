@@ -5384,30 +5384,22 @@ function commentpress_has_feature_image() {
 
 if (!is_admin()) add_action("wp_enqueue_scripts", "bloglow_custom_jquery_cdn", 11);
 function bloglow_custom_jquery_cdn() {
-wp_deregister_script('jquery');
-wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", false, null);
-wp_enqueue_script('jquery');
-wp_deregister_script('jquery-ui-button');
-wp_deregister_script('jquery-ui-resizable');
-wp_deregister_script('jquery-ui-position');
-wp_deregister_script('jquery-ui-dialog');
-wp_register_script('jquery-ui-resizable', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.ui.resizable.min.js", false, null);
-wp_register_script('jquery-ui-position', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.ui.position.min.js", false, null);
-wp_register_script('jquery-ui-button', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.ui.button.min.js", false, null);
-wp_register_script('jquery-ui-dialog', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.ui.dialog.min.js", false, null);
-wp_enque_script('jquery-ui-button');
-wp_enque_script('jquery-ui-resizable');
-wp_enque_script('jquery-ui-position');
-wp_enque_script('jquery-ui-dialog');
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", false, null);
+	wp_enqueue_script('jquery');
+	wp_deregister_script('jquery-ui-button');
+	wp_deregister_script('jquery-ui-resizable');
+	wp_deregister_script('jquery-ui-position');
+	wp_deregister_script('jquery-ui-dialog');
+	wp_register_script('jquery-ui-resizable', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.ui.resizable.min.js", false, null);
+	wp_register_script('jquery-ui-position', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.ui.position.min.js", false, null);
+	wp_register_script('jquery-ui-button', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.ui.button.min.js", false, null);
+	wp_register_script('jquery-ui-dialog', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.ui.dialog.min.js", false, null);
+	wp_enque_script('jquery-ui-button');
+	wp_enque_script('jquery-ui-resizable');
+	wp_enque_script('jquery-ui-position');
+	wp_enque_script('jquery-ui-dialog');
 }
-
-if (!is_admin()) add_action("wp_enqueue_scripts", "bloglow_custom_jquery_cdn", 11);
-function bloglow_custom_jquery_cdn() {
-wp_deregister_script('jquery');
-wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", false, null);
-wp_enqueue_script('jquery');
-}
-
 
 /** 
  * @description: temporary fix for WP 3.9
