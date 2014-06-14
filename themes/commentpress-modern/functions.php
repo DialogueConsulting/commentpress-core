@@ -743,7 +743,7 @@ function commentpress_header(
 	// build inline styles
 	echo '
 <style type="text/css">
-
+/* test text */
 #header
 {
 	background-color: #'.$bg_colour.';
