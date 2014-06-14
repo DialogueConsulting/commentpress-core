@@ -22,7 +22,40 @@ NOTES
  */
 if ( !isset( $content_width ) ) { $content_width = 525; }
 
+ /* TinyMCE: Styles Plugin - show only a lang class - to get the language integration running */
+if ( ! function_exists( 'accessible_tiny_mce_before_init' ) ):
+    function accessible_tiny_mce_before_init( $init_array ) {
+    $init_array['theme_advanced_styles'] = "lang=lang";
+    return $init_array;
+    }
+    add_filter( 'tiny_mce_before_init', 'accessible_tiny_mce_before_init' );
+endif;
 
+/* Control buttons in TinyMCE */
+if ( ! function_exists( 'accessible_mce_btns1' ) ):
+    function accessible_mce_btns1($orig) {
+    return array('bold','italic','strikethrough','|', 'bullist','numlist','blockquote','|','link','unlink','wp_more','|','spellchecker','fullscreen','wp_adv','|','attribs','cite','abbr','acronym');
+    }
+    add_filter( 'mce_buttons_1', 'accessible_mce_btns1', 999 );
+endif;
+
+if ( ! function_exists( 'accessible_mce_btns2' ) ):
+    function accessible_mce_btns2($orig) {
+    return array('formatselect','sub', 'sup', '|', 'pastetext', 'pasteword', 'removeformat', '|', 'undo', 'redo', 'wp_help', 'charmap','code','tablecontrols');
+    }
+    add_filter( 'mce_buttons_2', 'accessible_mce_btns2', 999 );
+endif;
+
+/* Reduce buttons and format options in TinyMCE */
+if ( ! function_exists( 'accessible_change_mce_buttons' ) ):
+    function accessible_change_mce_buttons( $initArray ) {
+        //@see http://wiki.moxiecode.com/index.php/TinyMCE:Control_reference
+        $initArray['theme_advanced_blockformats'] = 'p,address,h2,h3,h4,h5,h6';
+        $initArray['theme_advanced_disable'] = 'forecolor,justifyleft,justifycenter,justifyright,justifyfull,outdent,indent';
+        return $initArray;
+    }
+    add_filter('tiny_mce_before_init', 'accessible_change_mce_buttons');
+endif;
 
 
 
