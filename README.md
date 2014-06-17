@@ -3,7 +3,7 @@ CommentPress Core
 
 This is the ConsultNow platform's fork of the CommentPress Core plugin & themes. 
 
-Some changes to WCAG compliance, plus addition of social sharing (using ) and a few other bits & bobs to improve speed & scalability. 
+Some changes to WCAG compliance, plus addition of social sharing (using the [AddThis plugin for Wordpress](http://wordpress.org/plugins/addthis/) which is at least s508 accessibility compliant) and a few other bits & bobs to improve speed & scalability. We also recommend using it in production with the great [WP Accessiblity plugin](http://www.joedolson.com/articles/wp-accessibility/) which further improves accessible browsing.
 
 Specific docs/readme is potentially on its way, if there is community interest. In the meantime, [read the CommentPress docs for more information about how to implement the plugin](http://futureofthebook.org/commentpress/).
 
