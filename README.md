@@ -3,6 +3,10 @@ CommentPress Core
 
 This is the ConsultNow platform's fork of the CommentPress Core plugin & themes. 
 
+Some changes to WCAG compliance, plus addition of social sharing (using ) and a few other bits & bobs to improve speed & scalability. 
+
+Specific docs/readme is potentially on its way, if there is community interest. In the meantime, [read the CommentPress docs for more information about how to implement the plugin](http://futureofthebook.org/commentpress/).
+
 From the CommentPress Core docs:
 
 *CommentPress Core* is an open source theme and plugin for WordPress that allows readers to comment paragraph-by-paragraph, line-by-line or block-by-block in the margins of a text.
